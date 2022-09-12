@@ -17,3 +17,8 @@ a bot to fill a poll using python
 * [Selenium WebDriver](https://www.selenium.dev/) Browser based testing of sites
 * [Webdriver manager](https://pypi.org/project/webdriver-manager/) - Simplifies developers work of managing of chrom binary drivers for different browsers and OS. initially I was manually downloading and setting up the executable bianry before I found this
 
+## get started
+- Clone the project: `git clone https://github.com/iampato/web-scraper.git`
+- cd into the project: 
+- Install dependancies: `pip3 install -r requirements.txt`
+- Run the project: `python3 crawler.py`
