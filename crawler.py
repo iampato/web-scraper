@@ -2,7 +2,7 @@ from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.by import By
-
+import time
 
 class WebCrawler:
     # url: the url to be crawled
@@ -41,17 +41,18 @@ if __name__ == "__main__":
     url = "https://poll.fm/11192515"
     driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
     crawler = WebCrawler(url, driver)
-    crawler.crawl()
-    crawler.cleanCookies()
+    # crawler.crawl()
+    # crawler.cleanCookies()
     # range 1 to 100
-    # for i in range(1, 101):
-    #     try:
-    #         ## crawl the url
-    #         crawler.crawl()
-    #         ## clean cookies
-    #         crawler.cleanCookies()
-    #         print("Crawled {} times".format(i))
-    #     except Exception as e:
-    #         print(e)
+    for i in range(1, 101):
+        try:
+            ## crawl the url
+            crawler.crawl()
+            ## clean cookies
+            crawler.cleanCookies()
+            print("Crawled {} times".format(i))
+            time.sleep(2)
+        except Exception as e:
+            print(e)
 
-    # crawler.close()
+    crawler.close()
